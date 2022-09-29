@@ -1,9 +1,9 @@
-module b1-infra
+module cloud-foundation-pulumi
 
 go 1.19
 
 require (
-	github.com/pulumi/pulumi-google-native/sdk v0.18.0
+	github.com/pulumi/pulumi-google-native/sdk v0.26.0
 	github.com/pulumi/pulumi/sdk/v3 v3.40.2
 )
 
