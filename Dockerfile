@@ -29,6 +29,7 @@ RUN echo 'PATH=$PATH:/opt/go/bin:/opt/pulumi:/opt/google-cloud-sdk/bin' >> /etc/
 
 RUN useradd -m developer -s /bin/bash
 USER developer
+WORKDIR /home/developer
 
 EXPOSE 8080
 VOLUME /home/developer/go/src /home/developer/.config/gcloud

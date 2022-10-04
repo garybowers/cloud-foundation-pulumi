@@ -12,8 +12,8 @@ import (
 
 var (
 	// replace these values
-	org_id          = ""
-	billing_account = ""
+	org_id          = "791596196260"
+	billing_account = "01504C-A2522F-2110FA"
 )
 
 func randomHex(n int) (string, error) {
@@ -26,7 +26,7 @@ func randomHex(n int) (string, error) {
 
 func main() {
 
-	postfix, _ := randomHex(4)
+	postfix, _ := pulumi.NewStringAsset(randomHex(4))
 
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		//conf := config.New(ctx, "google-native")
@@ -42,7 +42,7 @@ func main() {
 			log.Println(err)
 		}
 
-		err = project.ProjectFactory(ctx, stack, "gke-test-1-"+postfix, "gke-test-1-"+postfix, folder.Name, billing_account)
+		err = project.NewProject(ctx, stack, "gke-test-1-"+postfix, "gke-test-1-"+postfix, folder.Name, billing_account)
 		fmt.Println(err)
 
 		return nil
