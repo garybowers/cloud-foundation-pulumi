@@ -3,8 +3,9 @@ package main
 import (
 	"fmt"
 	"log"
-	"github.com/garybowers/b1-infra-new/modules/project"
-	"github.com/garybowers/b1-infra-new/modules/network"
+
+	"github.com/garybowers/cloud-foundation-pulumi/modules/network"
+	"github.com/garybowers/cloud-foundation-pulumi/modules/project"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -29,7 +30,6 @@ func main() {
 		vpc.Args.Name = "vpc-1"
 		vpc.Args.ProjectId = prj.ProjectId
 		//vpc.Args.Project = pulumi.Sprintf("%s", prj.ProjectId)
-
 
 		vpcNetwork, err := vpc.Create(ctx)
 		if err != nil {
