@@ -1,4 +1,4 @@
-module github.com/garybowers/b1-infra-new/modules/network
+module github.com/garybowers/cloud-foundation-pulumi/modules/network
 
 go 1.19
 
