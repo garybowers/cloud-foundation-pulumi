@@ -1,4 +1,4 @@
-module github.com/garybowers/b1-infra-new/modules/project
+module github.com/garybowers/cloud-foundation-pulumi/modules/project
 
 go 1.19
 
