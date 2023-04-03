@@ -2,11 +2,12 @@ package project
 
 import (
 	"fmt"
+	"log"
+
 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/organizations"
 	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/projects"
 	"github.com/pulumi/pulumi-random/sdk/v4/go/random"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-	"log"
 )
 
 type ProjectArgs struct {
@@ -22,6 +23,7 @@ type ProjectArgs struct {
 
 type Project struct {
 	Args ProjectArgs
+	pulumi.ResourceState
 	Name string
 }
 
